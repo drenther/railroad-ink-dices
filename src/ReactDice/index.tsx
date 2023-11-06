@@ -154,7 +154,9 @@ export const Dice = forwardRef(
         disabled={disabled || rolling}
         onClick={clickHandler}
         style={buttonStyles}
-        className={`_space3d ${valueClassMap[value]} ${rolling && "rolling"}`}
+        className={`ri_dice _space3d ${valueClassMap[value]} ${
+          rolling && "rolling"
+        }`}
       >
         <div className="_3dbox">
           <div {...faceArray[0]} />

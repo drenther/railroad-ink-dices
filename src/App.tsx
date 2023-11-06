@@ -38,6 +38,14 @@ export default function App() {
             <label htmlFor={v}>{startCase(v)}</label>
           </div>
         ))}
+        <button
+          onClick={() => {
+            // @ts-ignore
+            [...document.querySelectorAll(".ri_dice")].map((el) => el.click());
+          }}
+        >
+          Roll
+        </button>
       </div>
       <PrimaryDice seed={seeds[0]} />
       <PrimaryDice seed={seeds[1]} />

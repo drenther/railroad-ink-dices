@@ -10,7 +10,7 @@ export function PrimaryDice({ seed }: DiceProps) {
     <Dice
       seed={seed}
       size={100}
-      triggers={["Enter"]}
+      triggers={["Enter", "click"]}
       faceBg="#b4b4b4"
       faces={[
         "./faces/image_part_001.png",
@@ -29,7 +29,7 @@ export function SpecialDice({ seed }: DiceProps) {
     <Dice
       seed={seed}
       size={100}
-      triggers={["Enter"]}
+      triggers={["Enter", "click"]}
       faceBg="#b4b4b4"
       faces={[
         "./faces/image_part_007.png",
@@ -48,7 +48,7 @@ export function RiverDice({ seed }: DiceProps) {
     <Dice
       size={100}
       seed={seed}
-      triggers={["Enter"]}
+      triggers={["Enter", "click"]}
       faceBg="#0078b6"
       faces={[
         "./faces/image_part_010.png",
@@ -67,7 +67,7 @@ export function LakeDice({ seed }: DiceProps) {
     <Dice
       size={100}
       seed={seed}
-      triggers={["Enter"]}
+      triggers={["Enter", "click"]}
       faceBg="#a8dffb"
       faces={[
         "./faces/image_part_014.png",
