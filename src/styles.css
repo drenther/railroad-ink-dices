@@ -10,12 +10,31 @@ body {
   align-items: center;
   justify-content: center;
   align-content: center;
+  padding-top: 20px;
 }
 
-.rules {
+.header {
   position: absolute;
   top: 10px;
   font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header a {
+  margin: 0 10px;
+}
+
+.header .variant {
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .variant label {
+  margin-top: 2px;
 }
 
 :root {

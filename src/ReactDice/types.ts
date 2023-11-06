@@ -10,7 +10,7 @@ export type TProps = React.CSSProperties & {
   placement?: string;
   sound?: string;
   triggers?: string[];
-  seed?: number;
+  seed?: string;
 };
 
 export type TValue = 1 | 2 | 3 | 4 | 5 | 6;
