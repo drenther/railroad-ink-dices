@@ -1,14 +1,14 @@
 // @ts-ignore
 import random from "canvas-sketch-util/random";
 import * as React from "react";
-import "./styles.scss";
+import "./styles.css";
 import { TProps, TSingleFace, TValue } from "./types";
 import {
   defaultFaceGrid,
   faceClasses,
   faceTransformMap,
   times,
-  valueClassMap
+  valueClassMap,
 } from "./utils";
 
 const { useState, useEffect, forwardRef, useImperativeHandle } = React;
@@ -16,7 +16,7 @@ const { useState, useEffect, forwardRef, useImperativeHandle } = React;
 const getFaceArray = (
   size: number,
   faces: string[],
-  faceBg?: string
+  faceBg?: string,
 ): TSingleFace[] => {
   return faceClasses.map((className: string, index: number) => ({
     className,
@@ -34,8 +34,8 @@ const getFaceArray = (
       width: size + "px",
       height: size + "px",
       ...(faceBg && { backgroundColor: faceBg }),
-      ...(faces[index] && { backgroundImage: `url(${faces[index]})` })
-    }
+      ...(faces[index] && { backgroundImage: `url(${faces[index]})` }),
+    },
   }));
 };
 
@@ -65,7 +65,7 @@ export const Dice = forwardRef(
     const [rolling, setRolling] = useState(false);
     const [faceArray, setFaceArray] = useState<TSingleFace[]>([]);
     const [placementStyles, setPlacementStyles] = useState<React.CSSProperties>(
-      {}
+      {},
     );
     const [buttonStyles, setButtonStyles] = useState<React.CSSProperties>({});
 
@@ -131,7 +131,7 @@ export const Dice = forwardRef(
       const positionStyles = placement?.split("-")?.reduce((acc, curr) => {
         return {
           ...acc,
-          [curr]: ["left", "right"].includes(curr) ? 0 : `-${size}px`
+          [curr]: ["left", "right"].includes(curr) ? 0 : `-${size}px`,
         };
       }, {}) as React.CSSProperties;
       setPlacementStyles(positionStyles);
@@ -143,7 +143,7 @@ export const Dice = forwardRef(
         ...placementStyles,
         width: size + "px",
         height: size + "px",
-        filter: disabled ? "grayscale(100%)" : "unset"
+        filter: disabled ? "grayscale(100%)" : "unset",
       });
     }, [placementStyles, size, disabled]);
 
@@ -166,5 +166,5 @@ export const Dice = forwardRef(
         </div>
       </button>
     );
-  }
+  },
 );
