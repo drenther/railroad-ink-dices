@@ -11,7 +11,7 @@ export function PrimaryDice({ seed }: DiceProps) {
       seed={seed}
       size={100}
       triggers={["Enter", "click"]}
-      faceBg="#b4b4b4"
+      faceBg="#eee"
       faces={[
         "./faces/image_part_001.png",
         "./faces/image_part_002.png",
@@ -30,7 +30,7 @@ export function SpecialDice({ seed }: DiceProps) {
       seed={seed}
       size={100}
       triggers={["Enter", "click"]}
-      faceBg="#b4b4b4"
+      faceBg="#eee"
       faces={[
         "./faces/image_part_007.png",
         "./faces/image_part_008.png",
